@@ -1,0 +1,203 @@
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: none;
+}
+
+:root{ 
+    --fondo-divs: rgba(31, 31, 31, 0.5);
+    --fondo-hover: rgba(58, 58, 58, 0.692);
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+    background: rgb(107, 106, 106);
+}
+
+body::-webkit-scrollbar-thumb{
+    background: rgb(66, 66, 66);
+}
+
+body{
+    background-image: url("../img/sword_orion.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-size: 16px;
+}
+
+.container{
+    background: rgba(0,0,0,0.75);
+    width: 100%;
+}
+
+.encabezado{
+    width: 100%;
+    height: 13vh;/*
+    border: 1px solid red;*/
+    background: var(--fondo-divs);
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido{
+    margin-top: 5px;
+    width: 100%;
+    min-height: 80vh;/*
+    border: 1px solid red;*/
+    background: var(--fondo-divs);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.planetas{
+    height: 90px;
+    width: 90px;
+    border: 3px solid white;
+    border-radius: 100%;
+    transition: .2s ease-in;
+}
+
+.planetas:hover{
+    margin-bottom: 15px;
+}
+
+#mercurio{
+    width: 60px;
+    height: 60px;
+}
+
+#venus{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+
+#tierra{
+    height: 90px;
+    width: 90px;
+}
+
+#marte{
+    height: 75px;
+    width: 75px;
+}
+
+#jupiter{
+    height: 140px;
+    width: 140px;
+}
+
+#saturno{
+    height: 130px;
+    width: 130px;
+}
+
+.anillos{
+    width: 160px;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: -15px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#urano{
+    height: 110px;
+    width: 110px;
+}
+
+#neptuno{
+    height: 105px;
+    width: 105px;
+}
+
+.contenedor-planetas{
+    min-width: 100px;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido > a{
+    transition: .3s ease-in;
+}
+
+.nombre-planeta{
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.footer{
+    margin-top: 5px;
+    width: 100%;
+    height: 10vh;/*
+    border: 1px solid red;*/
+    background: var(--fondo-divs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-info{
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container{
+        height: 100%;
+    }
+
+    .contenido{
+        flex-direction: column;
+    }
+
+    .footer{
+        min-height: 10vh;
+    }
+
+    a{
+        width: 100%;
+    }
+
+    .contenedor-planetas{
+        min-height: 210px;
+        width: 100%;
+        border-bottom: 3px solid white;
+        transition: ease-in .2s;
+        justify-content: center;
+    }
+}
